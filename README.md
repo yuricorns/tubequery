@@ -1,4 +1,4 @@
-# VidMind 🎬
+# TubeQuery🎬
 ### Chat with any YouTube video using RAG + Groq
 
 Paste a YouTube URL → VidMind fetches the transcript → chunks and indexes it → you ask questions and get grounded answers from the video content.
@@ -28,9 +28,9 @@ pip install -r requirements.txt
 
 ### 2. Set your Groq API key
 ```bash
-export GROQ_API_KEY=your_key_here
+export NVIDIA_API_KEY=your_key_here
 ```
-Get a free key at https://console.groq.com
+Get a free key at https://console.NVIDIA.com
 
 ### 3. Run the FastAPI backend
 ```bash
@@ -61,7 +61,7 @@ streamlit run frontend.py
 | Chunk size    | 500    | Captures a complete spoken thought without losing context |
 | Overlap       | 50     | Handles sentences split across chunk boundaries           |
 | Top-k         | 3      | Enough context without prompt bloat                       |
-| LLM           | llama3-8b-8192 (Groq) | Fast, free tier available            |
+| LLM           | NVIDIA | Fast, free tier available            |
 | Vector store  | ChromaDB | No setup required, handles embeddings internally       |
 
 ---
@@ -85,7 +85,7 @@ streamlit run frontend.py
 ## Tech Stack
 - **youtube-transcript-api** — transcript fetching
 - **ChromaDB** — vector storage and retrieval
-- **Groq** — LLM inference (Llama 3)
+- **nvidia** — LLM inference (Llama 3)
 - **FastAPI** — REST API backend
 - **SQLite** — query logging
 - **Streamlit** — frontend UI
